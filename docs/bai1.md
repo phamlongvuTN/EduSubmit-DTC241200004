@@ -1,4 +1,13 @@
 
+# Bài 1 – Tổng quan hệ thống và MEP
+- **Họ và tên:** Phạm Long Vũ
+- **MSSV:** DTC241200004
+- **Lớp:** Phát triển ứng dụng phân tán
+- **Repository:** https://github.com/phamlongvuTN/EduSubmit-DTC241200004
+- **File Word chi tiết:** [docs/hello.docx](hello.docx)
+
+---
+
 ## 1. Cài đặt
 Đã cài đặt thành công .NET 10 SDK, Git, Visual Studio Code và các extension cần thiết (C# Dev Kit, REST Client).
 Kiểm tra môi trường:
