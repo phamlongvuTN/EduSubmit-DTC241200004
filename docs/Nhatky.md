@@ -1,0 +1,5 @@
+	Dự đoán (ghi TRƯỚC khi chạy)	Kết quả thực tế	Đúng/Sai	Giải thích
+1	Client vẫn nhận và in được bài tập 3 bình thường mà không cần sửa code	Terminal 2 in đủ 3 bài tập	Đúng	Client dùng List<Assignment> nhận mảng động nên tự co giãn theo dữ liệu JSON trả về
+2	Client sẽ báo lỗi kết nối vì API không chạy	Báo lỗi HttpRequestException: No connection could be made...	Đúng	Hai tiến trình độc lập qua mạng; gọi mạng có thể lỗi nếu server ngừng hoạt động
+3	API sẽ trả mã lỗi 400 Bad Request và Client bị dừng lại	Báo ngoại lệ mã trạng thái 400 (Bad Request)	Đúng	API có code kiểm tra string.IsNullOrWhiteSpace, EnsureSuccessStatusCode() bắt lỗi dừng ngay
+4	Client gọi 5000 bị lỗi; chỉ cần gõ lệnh truyền URL 5050 là chạy được	Truyền URL http://localhost:5050 vào lệnh thì Client chạy thành công	Đúng	Địa chỉ API được truyền qua tham số dòng lệnh args[0], không bị viết cứng trong code
