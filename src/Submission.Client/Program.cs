@@ -29,9 +29,9 @@ var response = await http.PostAsJsonAsync("/api/submissions", request);
 response.EnsureSuccessStatusCode();
 
 var result = await response.Content.ReadFromJsonAsync<SubmissionResult>();
-Console.WriteLine($"  -> Da nop bai thanh cong! Ma luot nop: {result?.Id}");
-Console.WriteLine($"  -> Trang thai: {result?.Status}");
-Console.WriteLine($"  -> Thoi gian: {result?.ReceivedAt}");
+Console.WriteLine($"  - Da nop bai thanh cong! Ma luot nop: {result?.Id}");
+Console.WriteLine($"  - Trang thai: {result?.Status}");
+Console.WriteLine($"  - Thoi gian: {result?.ReceivedAt}");
 
 // 3. Goi GET /api/submissions/{id} - Doc lai luot nop vua tao (Buoc 12 mo rong)
 if (result is not null)
@@ -41,7 +41,7 @@ if (result is not null)
     checkResponse.EnsureSuccessStatusCode();
 
     var detail = await checkResponse.Content.ReadFromJsonAsync<SubmissionResult>();
-    Console.WriteLine($"  -> Xac nhan tu Server: MSSV {detail?.StudentCode} - Bai {detail?.AssignmentId} - Trang thai: {detail?.Status}");
+    Console.WriteLine($"  - Xac nhan tu Server: MSSV {detail?.StudentCode} - Bai {detail?.AssignmentId} - Trang thai: {detail?.Status}");
 }
 
 // Khai bao lai hop dong du lieu (Client doc lap, khong tham chieu truc tiep code API)

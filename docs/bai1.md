@@ -1,10 +1,9 @@
 
-# Bài 1 – Tổng quan hệ thống và MEP
-- **Họ và tên:** Phạm Long Vũ
-- **MSSV:** DTC241200004
-- **Lớp:** Phát triển ứng dụng phân tán
-- **Repository:** https://github.com/phamlongvuTN/EduSubmit-DTC241200004
-- **File Word chi tiết:** [docs/hello.docx](hello.docx)
+
+- Họ và tên: Phạm Long Vũ
+- MSSV: DTC241200004
+- Lớp: Phát triển ứng dụng phân tán
+- Repository: https://github.com/phamlongvuTN/EduSubmit-DTC241200004
 
 ---
 
@@ -31,9 +30,9 @@ Kiểm tra môi trường:
 
 ## 3. BasicWebApi (Bước 8)
 - Đã chạy thử nghiệm API bằng REST Client với file `requests.http` đạt kết quả:
-  - `GET /` $\rightarrow$ 200 OK.
-  - `POST /greetings` (hợp lệ) $\rightarrow$ 201 Created (có header `Location`).
-  - `POST /greetings` (tên rỗng) $\rightarrow$ 400 Bad Request.
+  - `GET /` - 200 OK.
+  - `POST /greetings` (hợp lệ) - 201 Created (có header `Location`).
+  - `POST /greetings` (tên rỗng) - 400 Bad Request.
 - Trả lời câu hỏi mục 8.4:
   1. Dòng `builder.Services.AddSingleton...` phải đứng trước `var app = builder.Build()` vì mọi cấu hình và dịch vụ cần được đăng ký vào DI Container trước khi ứng dụng được build và đóng băng container.
   2. Trong `/hello/{name}?language=en`, tham số `name` lấy từ Route parameter, còn `language` lấy từ Query string.
@@ -43,8 +42,8 @@ Kiểm tra môi trường:
 
 ## 4. MiniDistributedSystem (Bước 9)
 - Hai chương trình độc lập `Submission.Api` (chạy trên cổng 5000) và `Submission.Client` (gọi tới API) chạy song song trên 2 terminal:
-  - Client gửi `GET /api/assignments` $\rightarrow$ Nhận danh sách bài tập (200 OK).
-  - Client gửi `POST /api/submissions` $\rightarrow$ Nhận mã lượt nộp Guid và trạng thái `received` (201 Created).
+  - Client gửi `GET /api/assignments` - Nhận danh sách bài tập (200 OK).
+  - Client gửi `POST /api/submissions` - Nhận mã lượt nộp Guid và trạng thái `received` (201 Created).
 - Hai tiến trình độc lập, không tham chiếu code của nhau mà giao tiếp lỏng qua giao thức HTTP và định dạng JSON.
 - Địa chỉ API truyền qua tham số dòng lệnh `args[0]` giúp Client linh hoạt chạy trên nhiều môi trường khác nhau mà không cần sửa code.
 
