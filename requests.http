@@ -31,3 +31,4 @@ GET {{api}}/api/submissions/00000000-0000-0000-0000-000000000000
 
 ### 6. Doc luot nop khong ton tai -> 404 Not Found
 GET {{api}}/api/submissions/11111111-1111-1111-1111-111111111111
+
